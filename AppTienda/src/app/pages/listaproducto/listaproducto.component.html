@@ -1,0 +1,27 @@
+<hr>
+<div class="titulo">
+  <h1>PRODUCTOS</h1>
+</div>
+<hr>
+<div class="banner">
+  <img
+    src="https://www.namesnack.com/images/namesnack-nombres-para-tiendas-de-zapatos-deportivos-6000x4000-20230523.jpeg?crop=40:21,smart&width=1200&dpr=2"
+    class="img-fluid" alt="...">
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+      <div *ngFor="let producto of productos; let i = index" class="col-md-4">
+          <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                  <h5 class="card-title">{{ producto.nombre }}</h5>
+                  <p class="card-text">Precio: {{ producto.precio | currency }}</p>
+                  <p class="card-title">Desc: {{ producto.descripcion }}</p>
+                  <a href="#" class="btn btn-primary">Ver producto</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  <hr>

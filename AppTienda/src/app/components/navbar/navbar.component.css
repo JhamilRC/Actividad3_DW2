@@ -1,0 +1,9 @@
+/* Estilos para centrar el navbar */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.navbar{
+    background-color: #e3f2fd
+}
