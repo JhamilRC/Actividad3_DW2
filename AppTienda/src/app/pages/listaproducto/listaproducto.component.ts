@@ -24,5 +24,9 @@ export class ListaproductoComponent implements OnInit {
         this.productos = resp;
 
       });
+      
+  }
+  getImagePath(): string {
+    return `../../img/unnamed.png`;
   }
 }
