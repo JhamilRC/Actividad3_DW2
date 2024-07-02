@@ -21,7 +21,7 @@ export class AddproductoComponent implements OnInit {
   constructor(private sproducto: SproductosService) { }
 
   ngOnInit(): void {
-    console.log('estoy aqui');
+    //Sconsole.log('estoy aqui');
   }
   guardar(forma : NgForm) {
     this.sproducto.addProductos(this.productoModel)

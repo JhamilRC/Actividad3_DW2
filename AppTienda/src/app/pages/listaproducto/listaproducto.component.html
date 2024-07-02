@@ -18,8 +18,8 @@
                   <h5 class="card-title">{{ producto.nombre }}</h5>
                   <p class="card-text">Precio: {{ producto.precio | currency }}</p>
                   <p class="card-title">Desc: {{ producto.descripcion }}</p>
-                  <p class="card-title">Desc: {{ producto.idproducto }}</p>
-                  <button (click)="detalle({{producto.idproducto}})" type="button" class="btn btn-outline-primary btn-block">Ver producto</button>
+                  <p class="card-title">Cod: {{ producto.idproducto }}</p>
+                  <button (click)="detalle(producto.idproducto)"  type="button" class="btn btn-outline-primary">Ver producto</button>
               </div>
           </div>
       </div>

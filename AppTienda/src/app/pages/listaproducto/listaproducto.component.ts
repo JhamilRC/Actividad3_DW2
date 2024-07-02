@@ -24,8 +24,10 @@ export class ListaproductoComponent implements OnInit {
 
       });
   }
-  detalle(id:string){
-    console.log(`pasa`);
-    this.router.navigate(['/producto', id]);
+
+
+  detalle(idproducto: number) {
+    //console.log(idproducto);
+    this.router.navigate(['/producto', idproducto]);
   }
 }

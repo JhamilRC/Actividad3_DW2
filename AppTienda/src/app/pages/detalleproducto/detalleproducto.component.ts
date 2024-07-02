@@ -26,8 +26,8 @@ export class DetalleproductoComponent implements OnInit {
 
     this._sproductosService.selProductos(this.parametros).subscribe((resp: any) => {
       this.producto = resp[0];
-      console.log(resp);
-      console.log(this.producto);
+      //console.log(resp);
+      //console.log(this.producto);
 
     });
     this.producto='';
