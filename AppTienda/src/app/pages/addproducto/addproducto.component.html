@@ -6,6 +6,7 @@
     <hr>
     <form autocomplete="off" (ngSubmit)="guardar(forma)" #forma="ngForm">
         <div class="caja">
+            <img src="../img/banner7.jpg" alt="banner6...">
             <!-- Nombre-->
             <div class="form-group row">
                 <label class="col-2 col-form-label">Nombre:</label>
@@ -22,7 +23,7 @@
                 <div class="col-8">
                     <input class="form-control" type="number" name="precio" placeholder="Precio Unitario"
                         [class.is-invalid]="precio.invalid && precio.touched" [(ngModel)]="productoModel.precio"
-                        required minlength="1" #precio="ngModel" />
+                        required min="1" #precio="ngModel" />
                     <small *ngIf="precio.invalid && precio.touched" class="form-text text-danger">ingrese el
                         Precio</small>
                 </div>
@@ -33,7 +34,7 @@
                 <div class="col-8">
                     <input class="form-control" type="number" name="stock" placeholder="Stock"
                         [class.is-invalid]="stock.invalid && stock.touched" [(ngModel)]="productoModel.stock" required
-                        minlength="1" #stock="ngModel" />
+                        min="1" #stock="ngModel" />
                     <small *ngIf="stock.invalid && stock.touched" class="form-text text-danger">Ingrese el Stock</small>
                 </div>
             </div>

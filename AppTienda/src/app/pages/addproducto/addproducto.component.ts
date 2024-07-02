@@ -24,7 +24,8 @@ export class AddproductoComponent implements OnInit {
     //Sconsole.log('estoy aqui');
   }
   guardar(forma : NgForm) {
-    this.sproducto.addProductos(this.productoModel)
+    if (forma.valid){
+     this.sproducto.addProductos(this.productoModel)
       .subscribe((resp) => {
         console.log('Se registro el producto');
         Swal.fire({
@@ -33,5 +34,14 @@ export class AddproductoComponent implements OnInit {
           text: 'Se registro el Producto Correctamente'
         });
       });
+      forma.resetForm();
+    }
+    else{
+      Swal.fire({
+        allowOutsideClick: false,
+        title: 'Confirmacion',
+        text: 'Error al llenar registro de producto'
+      });
+    }
   }
 }

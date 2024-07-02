@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { DomsegurosPipe } from '../../pipe/domseguros.pipe';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { ProductosModel } from '../../models/productos.models';
 import { SproductosService } from '../../services/sproductos.service';
 import { ProcedureParam } from '../../models/procedureparam';
@@ -18,7 +18,7 @@ export class InicioComponent implements OnInit {
   videoUrl: string = 'https://www.youtube.com/embed/aVs2Y_mNMTc';
   procedureParam: ProcedureParam = new ProcedureParam();
   productos: any[] = [];
-  constructor(private sproducto: SproductosService) { }
+  constructor(private sproducto: SproductosService, private router:Router) { }
 
   ngOnInit(): void {
     this.procedureParam.inicia();
@@ -30,5 +30,12 @@ export class InicioComponent implements OnInit {
         this.productos = resp;
 
       });
+  }
+  detalle(idproducto: number) {
+    console.log(idproducto);
+    this.router.navigate(['/producto', idproducto]);
+  }
+  banner(){
+    this.router.navigate(['/producto', 2]);
   }
 }

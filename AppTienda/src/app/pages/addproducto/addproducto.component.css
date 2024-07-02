@@ -5,11 +5,10 @@
     margin: 0 auto;
     background-color: antiquewhite;
     padding: 20px;
-    
+
 }
 
 .contenedor .form-group {
-    /*width: 100%;*/
     justify-content: center;
 }
 
@@ -46,4 +45,10 @@ label {
     padding-left: 4%;
     padding-bottom: 4%;
     justify-content: center;
+}
+
+.caja img {    
+    border-radius: 50px;
+    height: 100px;
+
 }

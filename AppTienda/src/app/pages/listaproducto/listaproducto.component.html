@@ -4,25 +4,44 @@
 </div>
 <hr>
 <div class="banner">
-  <img
-    src="https://www.namesnack.com/images/namesnack-nombres-para-tiendas-de-zapatos-deportivos-6000x4000-20230523.jpeg?crop=40:21,smart&width=1200&dpr=2"
-    class="img-fluid" alt="...">
+  <img (click)="banner()" src="../img/banner4.jpg" class="img-fluid" alt="Img...">
 </div>
 <hr>
 <div class="container">
   <div class="row">
-      <div *ngFor="let producto of productos; let i = index" class="col-md-4">
-          <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="../img/{{producto.idproducto}}.jpg" alt="Card image cap">
-              <div class="card-body">
-                  <h5 class="card-title">{{ producto.nombre }}</h5>
-                  <p class="card-text">Precio: {{ producto.precio | currency }}</p>
-                  <p class="card-title">Desc: {{ producto.descripcion }}</p>
-                  <p class="card-title">Cod: {{ producto.idproducto }}</p>
-                  <button (click)="detalle(producto.idproducto)"  type="button" class="btn btn-outline-primary">Ver producto</button>
-              </div>
+    <div *ngFor="let producto of productos; let i = index" class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/2.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/2.jpg" class="d-block w-100" alt="...">
+            </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">Precio: {{ producto.precio | currency }}</p>
+          <p class="card-title">Desc: {{ producto.descripcion }}</p>
+          <p class="card-title">Cod: {{ producto.idproducto }}</p>
+          <button (click)="detalle(producto.idproducto)" type="button" class="btn btn-outline-primary">Ver
+            producto</button>
+        </div>
       </div>
+    </div>
   </div>
 </div>
-  <hr>
+<hr>

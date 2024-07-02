@@ -24,10 +24,11 @@ export class ListaproductoComponent implements OnInit {
 
       });
   }
-
-
   detalle(idproducto: number) {
-    //console.log(idproducto);
+    console.log(idproducto);
     this.router.navigate(['/producto', idproducto]);
+  }
+  banner(){
+    this.router.navigate(['/producto', 2]);
   }
 }

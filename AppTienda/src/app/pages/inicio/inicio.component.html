@@ -1,30 +1,33 @@
 <hr>
-<div id="carouselExamppleInterval" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
+    <div class="carousel-item" data-bs-interval="1300">
+      <img src="../../../img/banner1.jpg" class="d-block w-100" alt="Banner1...">
+    </div>
+    <div class="carousel-item" data-bs-interval="1500">
+      <img src="../../../img/banner2.jpeg" class="d-block w-100" alt="Banner2...">
+    </div>
     <div class="carousel-item active" data-bs-interval="2000">
-      <img src="../../../img/banner1.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="../../../img/banner2.jpeg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="../../../img/banner3.png" class="d-block w-100" alt="...">
+      <img (click)="banner()" src="../../../img/banner3.jpg" class="d-block w-100" alt="Banner3...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev"
+    fdprocessedid="hqcbak">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next"
+    fdprocessedid="lurcfb">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
 
+
 <hr>
 <div class="row mb-5">
   <div class="col">
-    <iframe width="1334" height="470" [src]="videoUrl | domseguros" frameborder="0"
+    <iframe width="100%" height="470" [src]="videoUrl | domseguros" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
     </iframe>
   </div>
@@ -34,21 +37,21 @@
 
 <hr>
 <div class="titulo">
-  <h1>Promosiones</h1>
+  <h1>Promociones</h1>
 </div>
 <hr>
 <div class="container">
   <div class="row">
-      <div *ngFor="let producto of productos; let i = index" class="col-md-4">
-          <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                  <h5 class="card-title">{{ producto.nombre }}</h5>
-                  <p class="card-text">Precio: {{ producto.precio | currency }}</p>
-                  <a href="#" class="btn btn-primary">Ver producto</a>
-              </div>
-          </div>
+    <div *ngFor="let producto of productos; let i = index" class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../img/{{producto.idproducto}}.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">Precio: {{ producto.precio | currency }}</p>
+          <button (click)="detalle(producto.idproducto)"  type="button" class="btn btn-primary">Ver producto</button>
+        </div>
       </div>
+    </div>
   </div>
 </div>
-  <hr>
+<hr>

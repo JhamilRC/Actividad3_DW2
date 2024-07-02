@@ -5,8 +5,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { AddproductoComponent } from './pages/addproducto/addproducto.component';
 
 export const routes: Routes = [
-    {path:'listarproductos',component:ListaproductoComponent},
-    {path:'addproductos',component:AddproductoComponent},
-    {path: 'producto/:id', component: DetalleproductoComponent},
-    {path:'**',component:InicioComponent},
+    { path: 'listarproductos', component: ListaproductoComponent },
+    { path: 'addproductos', component: AddproductoComponent },
+    { path: 'producto/:id', component: DetalleproductoComponent },
+    { path: '**', component: InicioComponent },
 ];

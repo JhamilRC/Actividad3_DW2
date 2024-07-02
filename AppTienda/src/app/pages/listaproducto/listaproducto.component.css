@@ -8,15 +8,16 @@
 .banner img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
-    
+    height: 400px;
+    width: 100%;
 }
 
 /* Tarjetas */
 .card {
     flex: 1 1 calc(25% - 2rem); /*Las tarjetas ocupan aproximadamente el 25% del ancho del contenedor*/ 
     max-width: 18rem;       
-    margin: 0.5rem;            
+    margin: 0.5rem;
+    background-color: #e3f2fd     
   }
   
   .card img {

@@ -2,7 +2,7 @@
 <hr>
 <div class="row fadeIn fast">
     <div class="col-md-4">
-        <img src="../img/{{producto.idproducto}}.jpg" class="img-fluid" [alt]="producto.nombre">
+
         <br><br>
         <a href="http://localhost:4200/listarproductos" class="btn btn-outline-danger btn-block">Regresar</a>
         <a href="http://localhost:4200/listarproductos" class="btn btn-outline-success">Comprar</a>
@@ -12,6 +12,28 @@
         <p>Precio: {{ producto.precio }}</p>
     </div>
 </div>
-<div>
+<hr>
+<h1>Seleccionar Talla</h1>
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio1">EU 38.5</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">EU 39</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio3">EU 39.5</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio4">EU 40</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio5">EU 40.5</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio6">EU 41</label>
+
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio7">EU 41.5</label>
 </div>
 <hr>
