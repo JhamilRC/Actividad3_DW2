@@ -24,7 +24,7 @@ export class InicioComponent implements OnInit {
     this.procedureParam.inicia();
     // this.procedureParam.pCampo0='Cnombre';
     // this.procedureParam.pValor0='a';
-    console.log('1');
+
     this.sproducto.selProductos(this.procedureParam)
       .subscribe((resp: any) => {
         this.productos = resp;

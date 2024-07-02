@@ -5,12 +5,12 @@
     margin: 0 auto;
     background-color: antiquewhite;
     padding: 20px;
+    
 }
 
 .contenedor .form-group {
-    width: 100%;
-    max-width: 600px;
-
+    /*width: 100%;*/
+    justify-content: center;
 }
 
 .titulo {
@@ -21,11 +21,15 @@
 }
 
 .caja {
-    background-color: rgb(150, 230, 206);
-    padding-top: 4%;
-    padding-left: 4%;
-    padding-bottom: 4%;
+    background-color: rgb(159, 159, 219);
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: solid;
+    border-color: rgb(31, 145, 147);
 }
+
 
 .caja .form-group {
     padding-top: 2%;
@@ -41,8 +45,5 @@ label {
     padding-top: 2%;
     padding-left: 4%;
     padding-bottom: 4%;
-}
-
-.input-group {
     justify-content: center;
 }

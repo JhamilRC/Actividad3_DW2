@@ -1,1 +1,15 @@
-<p>detalleproducto works!</p>
+<h1>Nombre: {{ producto.nombre }}</h1>
+<hr>
+<div class="row fadeIn fast">
+    <div class="col-md-4">
+        <img src="../img/{{producto.idproducto}}.jpg" class="img-fluid" [alt]="producto.nombre">
+        <br><br>
+        <a href="['/producto']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ producto.nombre }}</h3>
+        <p>Precio: {{ producto.precio }}</p>
+    </div>
+</div>
+<div>
+</div>
